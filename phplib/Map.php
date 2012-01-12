@@ -5,6 +5,7 @@ class Map {
 	public static $map =
 		array(
 	    '/' => 'main.xml',
+		   'map' => 'map/index.xml',
 	    'admin/settings' => 'admin/settings/index.xml',
 	    'admin/users' => 'admin/users/index.xml',
 	    'admin/users/stat' => 'admin/users/statistics.xml',

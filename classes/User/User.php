@@ -65,27 +65,7 @@ GROUP BY `type`';
 		$this->parseCounters();
 	}
 
-	function reloadPolkaCounters() {
-		$this->unparseCounters();
 
-		$query = 'SELECT `bookshelf_type`, COUNT(1) as `cnt` FROM `users_bookshelf` WHERE `id_user`=' . $this->id . ' GROUP BY `bookshelf_type`';
-		$data = Database::sql2array($query, 'bookshelf_type');
-
-		if (isset($data[Config::$shelfIdByNames['reading']]))
-			$this->counters['polka_reading'] = max(0, (int) $data[Config::$shelfIdByNames['reading']]['cnt']);
-		else
-			$this->counters['polka_reading'] = 0;
-		if (isset($data[Config::$shelfIdByNames['to-read']]))
-			$this->counters['polka_to-read'] = max(0, (int) $data[Config::$shelfIdByNames['to-read']]['cnt']);
-		else
-			$this->counters['polka_to-read'] = 0;
-		if (isset($data[Config::$shelfIdByNames['read']]))
-			$this->counters['polka_read'] = max(0, (int) $data[Config::$shelfIdByNames['read']]['cnt']);
-		else
-			$this->counters['polka_read'] = 0;
-		$this->parseCounters();
-		$this->save();
-	}
 
 	function getCounter($name) {
 		$this->unparseCounters();

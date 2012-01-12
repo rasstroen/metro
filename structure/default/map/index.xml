@@ -4,7 +4,7 @@
 		<layout file="layouts/page.xsl"/>
 		<stylesheet path="partials/map"/>
 		<javascript path="map"/>
-		<title>Metro</title>
+		<title>Местоположение</title>
 	</data>
 	<blocks>
 		<content>
@@ -13,7 +13,6 @@
 			</module>
 		</content>
 		<sidebar>
-			
 		</sidebar>
 	</blocks>
 </structure>

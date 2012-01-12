@@ -61,7 +61,6 @@ class CurrentUser extends User {
 		$this->setProperty('lastIp', Request::$ip);
 		$this->setAuthCookie($hash);
 		$this->reloadNewMessagesCount();
-		$this->reloadPolkaCounters();
 		$this->save();
 	}
 

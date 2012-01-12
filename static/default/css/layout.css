@@ -18,16 +18,18 @@ a{
 .l-wrapper{
 	width:100%;
 	overflow: hidden;
-	border: 2px solid #efefee;
 }
 
 .l-content{
 	float:left;
+	width:100%;
+	overflow: hidden;
 }
 
 .l-sidebar{
 	width:200px;
 	float: right;
+	overflow: hidden;
 }
 
 .l-user-auth{

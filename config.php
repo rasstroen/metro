@@ -11,6 +11,8 @@ class Config {
 	    'www_domain' => 'metro.ljrate.ru',
 	    'default_page_name' => 'main', // синоним для корня сайта
 	    'static_path' => '/home/metro/static', // 
+	    'cid' => '3KYHKUHYXJ1SWC0XOJSJQH0AUQ5BKEBST4YEBR5TYZ2FSENI',
+	    'csecret' => '31MMWA0EGZHLWO2ICVFL4SJPN1PZ4LZ4GZCX2Z2TS4JLDXMU',
 	    //USERS
 	    'default_language' => 'ru',
 	    //Register
