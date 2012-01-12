@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/forum"/>
+		<title>Форумы</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="forum" action="list" >
+				<param name="forum_id" type="get" value="1" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

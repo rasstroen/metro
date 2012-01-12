@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/error.xsl"/>
+		<title>Ошибка 404!</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="p404" action="show">
+			</module>
+
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

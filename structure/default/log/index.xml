@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/log"/>
+    <javascript path="jquery.timeago"/>
+    <javascript path="partials/log"/>
+		<role need="40"/>
+		<title>Изменения книжного фонда</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="log" action="list" >
+				<param name="target_type" type="var" value="all" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

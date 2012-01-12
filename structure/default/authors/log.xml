@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/log"/>
+    <javascript path="jquery.timeago"/>
+    <javascript path="partials/log"/>
+		<role need="40"/>
+		<title>Лог изменений автора {person-title:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="log" action="list" mode="author">
+				<param name="target_type" type="var" value="2" />
+				<param name="id_target" type="get" value="1" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

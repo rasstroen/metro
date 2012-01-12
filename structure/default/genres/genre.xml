@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/book"/>
+    <stylesheet path="partials/genre"/>
+    <javascript path="partials/loved"/>
+    <javascript path="genres/genre"/>
+		<title>{genre-title:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="genres" action="show" >
+				<param name="genre_name" type="get" value="1" />
+				<param name="genre_id" type="get" value="1" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

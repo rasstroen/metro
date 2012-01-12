@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<javascript path="partials/partners"/>
+		<title>Добавление партнёра</title>
+		<role need="50" />
+	</data>
+	<blocks>
+		<content>
+			<module name="rightholders" action="new">
+				
+			</module>
+		</content>
+	</blocks>
+</structure>

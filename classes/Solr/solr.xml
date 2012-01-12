@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<solr persistent="false">
+	<cores adminPath="/admin/cores" defaultCoreName="books">
+		<core name="books" instanceDir="books" >
+		</core>
+		<core name="authors" instanceDir="authors" >
+		</core>
+		<core name="series" instanceDir="series" >
+		</core>
+		<core name="magazines" instanceDir="magazines" >
+		</core>
+	</cores>
+</solr>

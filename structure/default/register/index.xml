@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<title>Регистрация</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="register" action="show" >
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

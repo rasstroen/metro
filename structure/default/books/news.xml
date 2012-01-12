@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/book"/>
+		<title>Новые книги</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="books" action="list" mode="new">
+				<param name="per_page" type="var" value="20" />
+				<param name="cache" type="var" value="10" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

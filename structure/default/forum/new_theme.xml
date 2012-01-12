@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<stylesheet path="partials/forum"/>
+		<title>Новая тема в форуме {theme-title:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="forum" action="new" mode="theme">
+				<param name="forum_id" type="get" value="1" />
+			</module>
+
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

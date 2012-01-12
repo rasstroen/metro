@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<stylesheet path="jquery-ui-1.8.16.custom"/>
+		<stylesheet path="partials/partner"/>
+		<javascript path="jquery-ui"/>
+		<javascript path="jquery-ui-datepicker-ru"/>
+		<javascript path="partials/statistics"/>
+		<title>Список партнёров</title>
+		<role need="50" />
+	</data>
+	<blocks>
+		<content>
+			<module name="partners" action="list">
+				<param name="per_page" type="val" value="10" />
+			</module>
+		</content>
+	</blocks>
+</structure>

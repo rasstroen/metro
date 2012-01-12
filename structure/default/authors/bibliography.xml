@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/book"/>
+		<title>Библиография автора {person-title:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="books" action="list" mode="bibliography">
+				<param name="author_id" type="get" value="1" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

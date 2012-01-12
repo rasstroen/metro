@@ -1,0 +1,33 @@
+body{
+	background: #fefefe;
+	font-size:11px;
+	font-family: Georgia, Arial;
+}
+
+a{
+	text-decoration:  none;
+}
+
+.l-user-auth{
+	float:right;
+}
+
+.l-user-auth a{
+	color : #334;
+}
+
+.l-user-auth form .linput{
+	border:1px solid #333;
+	width : 120px;
+	height : 20px;
+	color: #111;
+}
+
+.l-user-auth form #submit{
+	color: #111;
+}
+
+
+.h-navigation ul li.top-item{
+	display: none;
+}

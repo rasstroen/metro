@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<javascript path="jquery-search-hl"/>
+		<layout file="layouts/page.xsl"/>
+		<stylesheet path="partials/book"/>
+		<stylesheet path="partials/review"/>
+		<javascript path="jquery.timeago"/>
+		<javascript path="tiny_mce/tiny_mce"/>
+		<javascript path="partials/loved"/>
+		<javascript path="books/book"/>
+		<title>{book-title:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="books" action="show" >
+				<param name="book_id" type="get" value="1" />
+			</module>
+			<module name="books" action="list" mode="similar">
+				<param name="book_id" type="get" value="1" />
+			</module>
+			<module name="reviews" action="list" >
+				<param name="target_type" type="val" value="0" />
+				<param name="target_id" type="get" value="1" />
+			</module>
+			<module name="reviews" action="list" mode="rates">
+				<param name="target_type" type="val" value="0" />
+				<param name="target_id" type="get" value="1" />
+			</module>
+			<module name="reviews" action="new" >
+				<param name="target_type" type="val" value="0" />
+				<param name="target_id" type="get" value="1" />
+			</module>
+		</content>
+		<sidebar>
+			<module name="books" action="list" mode="editions">
+				<param name="book_id" type="get" value="1" />
+			</module>
+			<module name="books" action="list" mode="translations">
+				<param name="book_id" type="get" value="1" />
+			</module>
+		</sidebar>
+	</blocks>
+</structure>

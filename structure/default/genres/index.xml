@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/genre"/>
+		<title>Жанры</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="genres" action="list" >
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

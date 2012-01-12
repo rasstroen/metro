@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data> 
+		<layout file="layouts/page.xsl"/>
+		<title>Статистика по скачиванию книг жанра</title>
+		<role need="50" />
+	</data>
+	<blocks>
+		<content>
+			<module name="statistics" action="list" mode="genre">
+				<param name="per_page" type="val" value="31" />
+				<param name="genre_id" type="get" value="2" />
+			</module>
+		</content>
+	</blocks>
+</structure>

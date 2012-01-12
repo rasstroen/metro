@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<javascript path="partials/partners"/>
+		<title>Редактирование партнёра</title>
+		<role need="50" />
+	</data>
+	<blocks>
+		<content>
+			<module name="partners" action="edit">
+				<param name="partner_id" type="get" value="2" />
+			</module>
+		</content>
+	</blocks>
+</structure>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+  <data>
+    <layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/author"/>
+    <stylesheet path="partials/book"/>
+    <stylesheet path="partials/event"/>
+     <javascript path="jquery.timeago"/>
+    <javascript path="tiny_mce/tiny_mce"/>
+    <javascript path="partials/wall"/>
+    <title>Событие</title>
+  </data>
+  <blocks>
+    <content>
+      <module name="events" action="show">
+        <param name="post_id" type="get" value="3" />
+        <param name="user_id" type="get" value="1" />
+      </module>
+    </content>
+    <sidebar>
+    </sidebar>
+  </blocks>
+</structure>

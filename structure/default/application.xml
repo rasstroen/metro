@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<stylesheet path="layout"/>
+	</data>
+	<blocks>
+		<header>
+			<module name="users" action="show" mode="auth"/>
+		</header>
+	</blocks>
+	<navigations>
+		<item name="main">
+			<menu_items>
+				<item name="Действия" path="/actions">
+					<menu_items>
+						<item name="Работа" path="/work"/>
+						<item name="Продажа" path="/sell"/>
+						<item name="Покупка" path="/buy"/>
+						<item name="Захват" path="/flag"/>
+					</menu_items>
+				</item>
+				<item name="Профиль" path="/me">
+					<menu_items>
+						<item name="Информация" path="/me/info"/>
+						<item name="Выход" path="/logout"/>
+					</menu_items>
+				</item>
+			</menu_items>
+		</item>
+		<item name="footer">
+			<menu_items>
+				<item name="О проекте" path="#"/>
+				<item name="Условия использования" path="#"/>
+				<item name="Помощь" path="#"/>
+				<item name="Правила" path="#"/>
+			</menu_items>
+		</item>
+	</navigations>
+</structure>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/author"/>
+    <stylesheet path="partials/book"/>
+    <stylesheet path="partials/event"/>
+    <stylesheet path="partials/comment"/>
+    <javascript path="jquery.timeago"/>
+    <javascript path="tiny_mce/tiny_mce"/>
+    <javascript path="partials/wall"/>
+		<title>{post-subject:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="events" action="show">
+			<param name="post_id" type="get" value="1" />
+			</module>
+		</content>
+	</blocks>
+</structure>

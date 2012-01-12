@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<title>Управление пользололователями</title>
+		<role need="50" />
+	</data>
+	<blocks>
+		<content>
+			<module name="users" action="list" mode="search">
+				<param name="per_page" type="val" value="50" />
+			</module>
+		</content>
+	</blocks>
+</structure>

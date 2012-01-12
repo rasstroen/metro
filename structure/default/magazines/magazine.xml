@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<javascript path="jquery-search-hl"/>
+		<layout file="layouts/page.xsl"/>
+		<stylesheet path="partials/magazine"/>
+		<title>{magazine-title:get:1}</title>
+		<role need="0"/>
+	</data>
+	<blocks>
+		<content>
+			<module name="magazines" action="show" >
+				<param name="magazine_id" type="get" value="1" />
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

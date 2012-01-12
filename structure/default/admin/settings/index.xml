@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<title>Настройки</title>
+		<role need="50"/>
+		<layout file="layouts/page.xsl"/>
+		<stylesheet path="partials/setting"/>
+		<role need="50" />
+	</data>
+	<blocks>
+		<content>
+			<module name="settings" action="list">
+				<param name="per_page" type="val" value="10" />
+			</module>
+			<module name="settings" action="new"/>
+		</content>
+	</blocks>
+</structure>

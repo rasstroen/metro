@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/author"/>
+    <stylesheet path="partials/book"/>
+		<role need="10"/>
+    <title>Мой профиль</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="users" action="show" >
+				<param name="user_id" type="current_user" value="" />
+			</module>
+			<module name="books" action="list" mode="loved">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+			<module name="authors" action="list" mode="loved">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+			<module name="genres" action="list" mode="loved">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+			<module name="series" action="list" mode="loved">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+		</content>
+		<sidebar>
+			<module name="users" action="list" mode="friends">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+			<module name="users" action="list" mode="followers">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+			<module name="users" action="list" mode="compare_interests">
+				<param name="user_id" type="current_user" value="" />
+			</module>
+		</sidebar>
+	</blocks>
+</structure>

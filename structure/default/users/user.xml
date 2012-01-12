@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/author"/>
+    <stylesheet path="partials/book"/>
+    <stylesheet path="partials/user"/>
+    <stylesheet path="partials/author"/>
+    <javascript path="users/edit"/>
+		<title>Профиль пользователя {profile-nickname:get:1}</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="users" action="show" >
+				<param name="user_id" type="get" value="1" />
+			</module>
+			<module name="books" action="list" mode="loved">
+				<param name="user_id" type="get" value="1" />
+				<param name="limit" type="var" value="10" />
+			</module>
+			<module name="authors" action="list" mode="loved">
+				<param name="user_id" type="get" value="1" />
+				<param name="limit" type="var" value="10" />
+			</module>
+			<module name="genres" action="list" mode="loved">
+				<param name="user_id" type="get" value="1" />
+				<param name="limit" type="var" value="10" />
+			</module>
+			<module name="series" action="list" mode="loved">
+				<param name="user_id" type="get" value="1" />
+				<param name="limit" type="var" value="10" />
+			</module>
+		</content>
+		<sidebar>
+			<module name="users" action="list" mode="friends">
+				<param name="user_id" type="get" value="1" />
+			</module>
+			<module name="users" action="list" mode="followers">
+				<param name="user_id" type="get" value="1" />
+			</module>
+		</sidebar>
+	</blocks>
+</structure>

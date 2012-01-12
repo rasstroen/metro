@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+		<title>Metro</title>
+	</data>
+	<blocks>
+		<content>
+			
+		</content>
+		<sidebar>
+			
+		</sidebar>
+	</blocks>
+</structure>

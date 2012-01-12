@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/magazine"/>
+    <title>Журналы</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="magazines" action="list" >
+			</module>
+
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<structure>
+	<data>
+		<layout file="layouts/page.xsl"/>
+    <stylesheet path="partials/author"/>
+    <stylesheet path="partials/book"/>
+    <stylesheet path="partials/event"/>
+    <stylesheet path="partials/comment"/>
+    <javascript path="jquery.timeago"/>
+    <javascript path="tiny_mce/tiny_mce"/>
+    <javascript path="partials/wall"/>
+		<title>Лента друзей</title>
+	</data>
+	<blocks>
+		<content>
+			<module name="events" action="list" >
+				<param name="user_id" type="current_user" value="" />
+				<param name="type" type="var" value="not_self" />
+				<param name="select" type="get" value="2" />
+			</module>
+			<module name="events" action="new" >
+			</module>
+		</content>
+		<sidebar>
+		</sidebar>
+	</blocks>
+</structure>
