@@ -119,5 +119,13 @@ if ($dev_mode) {
 }
 
 
+/*
+SELECT * , ( 6371 * acos( cos( radians( 55.75581451684764 ) ) * cos( radians( lat ) ) * cos( radians( lon ) - radians( 37.61762201786041 ) ) + sin( radians( 55.75581451684764 ) ) * sin( radians( lat )) )) AS distance
+FROM metro_stations
+HAVING distance <0.9
+ORDER BY distance
+LIMIT 0 , 20
 
-	
+ */
+
+ 

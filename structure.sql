@@ -18,6 +18,20 @@ SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Структура таблицы `metro_lines`
 --
+--SELECT * , ( 6371 * acos( cos( radians( 55.75581451684764 ) ) * cos( radians( lat ) ) * cos( radians( lon ) - radians( 37.61762201786041 ) ) + sin( radians( 55.75581451684764 ) ) * sin( radians( lat ) ) ) ) AS distance
+--FROM metro_stations
+--HAVING distance <0.1
+--ORDER BY distance
+--LIMIT 0 , 20
+
+--UPDATE `metro_stations` SET `cos_radians_lat_x_cos_radians_lon` = cos( radians( lat ) ) * cos( radians( lon ))
+
+--SELECT * , ( 6371 * acos( cos( radians( 55.75581451684764 ) ) * cos( radians( lat ) ) * cos( radians( lon ) - radians( 37.61762201786041 ) ) + sin( radians( 55.75581451684764 ) ) * sin( radians( lat ) ) ) ) AS distance
+--FROM metro_stations
+--HAVING distance <0.1
+--ORDER BY distance
+--LIMIT 0 , 20
+
 
 CREATE TABLE IF NOT EXISTS `metro_lines` (
   `id` int(11) NOT NULL auto_increment,
