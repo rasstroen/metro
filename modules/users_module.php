@@ -291,7 +291,7 @@ class users_module extends BaseModule {
 		$this->data['profile']['role'] = $user->getRole();
 		$this->data['profile']['lang'] = $user->getLanguage();
 		$this->data['profile']['city_id'] = $user->getProperty('city_id');
-		$this->data['profile']['city'] = Database::sql2single('SELECT `name` FROM `lib_city` WHERE `id`=' . (int) $user->getProperty('city_id'));
+		
 		$this->data['profile']['picture'] = $user->getAvatar();
 		$this->data['profile']['rolename'] = $user->getRoleName();
 		$this->data['profile']['bday'] = $user->getBday(date('d-m-Y'), 'd-m-Y');
@@ -308,18 +308,13 @@ class users_module extends BaseModule {
 		$this->data['profile']['quote'] = $user->getPropertySerialized('quote');
 		$this->data['profile']['about'] = $user->getPropertySerialized('about');
 		$this->data['profile']['change_nickname'] = $user->checkNickChanging();
-		$this->data['profile']['download_count'] = $user->profile['totalDownloadCount'];
+		
 //		$this->data['profile']['path_message'] = Config::need('www_path').'/me/messages?to='.$user->id;
 		$this->data['profile']['path_message'] = Config::need('www_path') . '/user/' . $user->getNickName() . '/contact';
 		$this->data['profile']['path_edit_notifications'] = Config::need('www_path') . '/user/me/edit_notifications';
 		$this->data['profile']['path_stat'] = Config::need('www_path') . '/admin/users/stat/' . $user->id;
 
 
-		$this->data['download_limit'] = array(
-		    'count' => $dc = $user->getDownloadCount(),
-		    'limit' => $dl = $user->getDownloadLimit(),
-		    'available' => max(0, $dl - $dc),
-		);
 	}
 
 	/**

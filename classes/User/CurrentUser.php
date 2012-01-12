@@ -30,12 +30,6 @@ class CurrentUser extends User {
 		$out = $this->profile_xml;
 		list($out['new_messages'], $out['new_notifications']) = $this->getNewMessagesCount();
 		$out['change_nickname'] = $this->checkNickChanging();
-		$out['download_limit'] = array(
-		    'count' => $dc = $this->getDownloadCount(),
-		    'limit' => $dl = $this->getDownloadLimit(),
-		    'available' => max(0, $dl - $dc),
-		);
-
 		return $out;
 	}
 

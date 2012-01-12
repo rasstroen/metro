@@ -12,18 +12,6 @@
 			<module name="users" action="show" >
 				<param name="user_id" type="current_user" value="" />
 			</module>
-			<module name="books" action="list" mode="loved">
-				<param name="user_id" type="current_user" value="" />
-			</module>
-			<module name="authors" action="list" mode="loved">
-				<param name="user_id" type="current_user" value="" />
-			</module>
-			<module name="genres" action="list" mode="loved">
-				<param name="user_id" type="current_user" value="" />
-			</module>
-			<module name="series" action="list" mode="loved">
-				<param name="user_id" type="current_user" value="" />
-			</module>
 		</content>
 		<sidebar>
 			<module name="users" action="list" mode="friends">

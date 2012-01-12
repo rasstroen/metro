@@ -2,10 +2,32 @@ body{
 	background: #fefefe;
 	font-size:11px;
 	font-family: Georgia, Arial;
+	margin: 0;
+	padding: 0;
+	border-collapse: collapse;
 }
 
 a{
 	text-decoration:  none;
+}
+
+.l-header{
+	background: #777879;
+}
+
+.l-wrapper{
+	width:100%;
+	overflow: hidden;
+	border: 2px solid #efefee;
+}
+
+.l-content{
+	float:left;
+}
+
+.l-sidebar{
+	width:200px;
+	float: right;
 }
 
 .l-user-auth{

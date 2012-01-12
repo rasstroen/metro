@@ -22,12 +22,12 @@ class Config {
 	    // Avatars
 	    'avatar_upload_path' => '/home/metro/static/upload/avatars',
 	    // Mongo
-	    'mongohost' => '127.0.0.1',
+	    'mongohost' => 'localhost',
 	    // MySQL
 	    'dbuser' => 'root',
 	    'dbpass' => '2912',
 	    'dbhost' => 'localhost',
-	    'dbname' => 'ls2',
+	    'dbname' => 'metro',
 	    // MODULES
 	    'writemodules_path' => '/home/metro/modules/write',
 	    // THEMES
