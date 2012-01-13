@@ -1,39 +1,43 @@
 var map;
 
+var MARKER_TYPE_IMHERE = 1;
+var MARKER_TYPE_STATION = 2;
+
 function success(position) {
 	var s = document.querySelector('#status');
- 
 	if (s.className == 'success') {
 		// not sure why we're hitting this twice in FF, I think it's to do with a cached result coming back    
 		return;
 	}
-  
 	s.innerHTML = "Мы нашли Вас!";
 	s.className = 'success';
 	lat = position.coords.latitude;
 	lon = position.coords.longitude;
-	drawMap(lat, lon, 18)
+	drawMap(lat, lon, 14)
+	addMarker(MARKER_TYPE_IMHERE, lat, lon);
+}
+
+
+function addMarker(type,lat,lon,title){
+	var icon = new GIcon(G_DEFAULT_ICON);
 	
-	var blueIcon = new GIcon(G_DEFAULT_ICON);
-	blueIcon.image = "http://www.google.com/intl/en_us/mapfiles/ms/micons/blue-dot.png";
-                
-	// Set up our GMarkerOptions object
+	if(type == MARKER_TYPE_IMHERE)
+		icon.image = "/static/default/img/markers/imhere.png";
+	if(type == MARKER_TYPE_STATION)
+		icon.image = "/static/default/img/markers/station.png";
+	
 	markerOptions = {
-		icon:blueIcon
+		icon:icon,
+		title : title
 	};
-
-
 	var point = new GLatLng(lat,lon);
 	map.addOverlay(new GMarker(point, markerOptions));
-	
 }
 
 function error(msg) {
 	var s = document.querySelector('#status');
 	s.innerHTML = typeof msg == 'string' ? msg : "failed";
 	s.className = 'fail';
-  
-// console.log(arguments);
 }
 
 if (navigator.geolocation) {
@@ -49,9 +53,9 @@ function drawMap(lat,lon,zoom){
 		lon = 37.629268;
 	}
 	if(!zoom)
-		zoom = 17;
+		zoom = 11;
 	map = new GMap2(document.getElementById("map_canvas"));
-	map.setMapType(G_HYBRID_MAP);
+	map.setMapType(G_SATELLITE_MAP);
 	map.addControl(new GLargeMapControl());
 
 	map.setCenter(new GLatLng(lat, lon), zoom);
@@ -61,5 +65,8 @@ function drawMap(lat,lon,zoom){
 			alert(latlng)
 		}
 	});
-
+	if(markers)
+		for(var i in markers){
+			addMarker(MARKER_TYPE_STATION, markers[i].lat,markers[i].lon,markers[i].title);
+		}
 }

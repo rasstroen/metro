@@ -15,8 +15,23 @@
 		</article>
 		<div id="map_canvas"></div>
 		<script>
-drawMap();
+var markers={};
+			<xsl:for-each select="stations/item">
+				<xsl:text>markers[</xsl:text>
+				<xsl:value-of select="@id" />
+				<xsl:text>]={title:"</xsl:text>
+				<xsl:value-of select="@title" />
+				<xsl:text>",lat:</xsl:text>
+				<xsl:value-of select="@lat" />
+				<xsl:text>,lon:</xsl:text>
+				<xsl:value-of select="@lon" />
+				<xsl:text>};</xsl:text>
+				<xsl:text>
+				</xsl:text>
+			</xsl:for-each>
+			drawMap();
 		</script>
+		
 		
 	</xsl:template>
 
