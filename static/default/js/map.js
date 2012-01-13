@@ -31,7 +31,14 @@ function addMarker(type,lat,lon,title){
 		title : title
 	};
 	var point = new GLatLng(lat,lon);
-	map.addOverlay(new GMarker(point, markerOptions));
+	var marker = new GMarker(point, markerOptions);
+	map.addOverlay(marker);
+	
+	var html = "станция метро <b>" + title + "</b>";
+	GEvent.addListener(marker, 'click', function() {
+		map.setCenter(new GLatLng(lat, lon));
+		marker.openInfoWindowHtml(html);
+	});
 }
 
 function error(msg) {
@@ -62,7 +69,7 @@ function drawMap(lat,lon,zoom){
 	
 	GEvent.addListener(map,"click", function(overlay, latlng) {     
 		if (latlng) { 
-			alert(latlng)
+			//alert(latlng)
 		}
 	});
 	if(markers)
