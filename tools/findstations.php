@@ -43,18 +43,25 @@ function fs_query($method, $params) {
 	foreach ($params as $f => $v)
 		$pp[] = $f . '=' . $v;
 	$url.= implode('&', $pp);
+	echo $url."\n";
 	$res = json_decode(file_get_contents($url),1);
 	return $res;
 	
 }
 $lastId = isset($_GET['lastId'])?$_GET['lastId']:0;
-$query = 'SELECT CONCAT(lat,\',\',lon) FROM metro_stations WHERE lat>0 AND id> '.$lastId.' ORDER BY id LIMIT 1';
+$query = 'SELECT CONCAT(lat,\',\',lon) FROM metro_stations WHERE lat>0 AND id> '.$lastId.' AND enabled=1 ORDER BY id LIMIT 1';
 $latlon = Database::sql2single($query);
 
+$query = 'SELECT title FROM metro_stations WHERE lat=0 AND id> '.$lastId.' AND enabled=1  ORDER BY id LIMIT 1';
+$title = Database::sql2single($query);
+
 $params['ll'] = $latlon;
+$q = ' '.$title;
+echo $q."\n";
+$params['query'] = urlencode($q);
 $params['limit'] = 300;
 $params['intent'] = 'browse';
-$params['radius'] = 9000;
+$params['radius'] = 90000;
 $params['categoryId'] = '4bf58dd8d48988d1fd931735';
 $places = fs_query('venues/search', $params);
 
@@ -64,6 +71,8 @@ foreach($places['response']['groups'][0]['items'] as $station){
 	$realName = str_replace('Метро', '', $station['name']);
 	$realName = str_replace('метро', '', $realName);
 	$realName = str_replace('станция', '', $realName);
+	$realName = str_replace('Станция', '', $realName);
+	$realName = str_replace('-', '', $realName);
 	$realName = str_replace('«', '', $realName);
 	$realName = str_replace('»', '', $realName);
 	$realName = explode('(',$realName);
